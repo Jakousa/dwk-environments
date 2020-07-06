@@ -5,7 +5,7 @@ const port = 3000
 
 const mustache = require('mustache')
 
-const COLOR = "black"
+const COLOR = "red"
 
 app.get("/", async (req, res) =>{
   const template = await fs.readFile("index.mustache", "utf-8")
