@@ -1,11 +1,3 @@
-FROM node:alpine
+FROM nginx:1.19-alpine
 
-WORKDIR /usr/src/app
-
-COPY package* ./
-
-RUN npm ci
-
-COPY . .
-
-CMD ["npm", "start"]
+COPY index.html /usr/share/nginx/html
